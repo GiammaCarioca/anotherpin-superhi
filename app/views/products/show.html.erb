@@ -5,7 +5,7 @@
 <%= simple_form_for [@product, @order_item] do |f| %>
   <%= f.input :quantity %>
 
-  <%= f.button "Add to cart"%>
+  <%= f.button :submit, "Add to cart"%>
 <% end %>
 
 <p>
