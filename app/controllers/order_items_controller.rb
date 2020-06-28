@@ -9,6 +9,16 @@ class OrderItemsController < ApplicationController
 
     @current_cart.order_items.create(product: @product, quantity: @quantity)
 
+    flash[:success] = "Thanks for adding to your cart"
+
+    redirect_to product_path(@product)
+  end
+
+  def update
+    @product = Product.find(params[:product_id])
+
+    flash[:success] = "Thanks for updating your cart"
+
     redirect_to product_path(@product)
   end
 
