@@ -14,6 +14,10 @@ class OrdersController < ApplicationController
     @order.add_from_cart(@current_cart)
 
     if @order.save
+      reset_session
+
+      flash[:success] = "Order completed" 
+
       redirect_to order_path(@order)
     else
       render "new"
