@@ -26,7 +26,7 @@ gem 'active_link_to'
 
 gem 'simple_form' 
 
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'fog-aws'
 
